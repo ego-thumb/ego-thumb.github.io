@@ -1,0 +1,458 @@
+body {
+    font-family: 'Google Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    padding: 40px 0;
+}
+
+.title-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1;
+    color: #333;
+}
+
+.title-logo {
+    height: 2.2em;
+    vertical-align: middle;
+    margin-right: 15px;
+    margin-bottom: 8px;
+}
+
+.author-container {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+/* Pull Figure Section */
+.pull-figure-section {
+    margin: 40px 0;
+}
+
+.pull-figure-container {
+    width: 70%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pull-figure-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pull-figure-caption {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 1.4;
+    color: #2c2c2c;
+    font-family: 'Google Sans', sans-serif;
+}
+
+/* Gray Background Section */
+.gray-section {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+    margin: 0;
+}
+
+/* White Background Section */
+.white-section {
+    background-color: #ffffff;
+    padding: 50px 0;
+    margin: 0;
+}
+
+.video-section {
+    margin: 40px auto;
+    width: 70%;
+    max-width: 1000px;
+}
+
+.video-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-video {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.content-section {
+    margin: 40px auto;
+    width: 70%;
+    max-width: 1000px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.centered-title {
+    text-align: center;
+}
+
+.abstract-text {
+    font-size: 1rem;
+    text-align: justify;
+    max-width: 100%;
+    margin: 0 auto;
+    line-height: 1.4;
+    color: #2c2c2c;
+    font-family: 'Google Sans', sans-serif;
+}
+
+hr.rounded {
+    background: #cbcbcb;
+    border-radius: 15px;
+    height: 2px;
+    width: 100%;
+    margin: 0;
+    border: none;
+}
+
+footer {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.method-image {
+    max-width: 100%;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-container {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.pdf-container object {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.method-text {
+    font-size: 1rem;
+    text-align: justify;
+    max-width: 100%;
+    margin: 20px 0;
+    line-height: 1.4;
+    color: #2c2c2c;
+    font-family: 'Google Sans', sans-serif;
+}
+
+.rows {
+    margin: 30px auto;
+    width: 70%;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+
+.overview-title {
+    text-align: left;
+    font-size: 2.3rem;
+    margin-bottom: 25px;
+    margin-left: 0;
+    color: #333;
+    font-family: 'Google Sans', sans-serif;
+    line-height: 1.15;
+}
+
+.title {
+    color: #333;
+}
+
+.content.has-text-justified {
+    text-align: justify;
+}
+
+/* Image Grid */
+.image-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.image-item {
+    flex: 1;
+    min-width: calc(33% - 20px);
+    max-width: calc(33% - 20px);
+    text-align: center;
+}
+
+.grid-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.image-caption {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    margin-top: 10px;
+    font-family: 'Google Sans', sans-serif;
+}
+
+/* Make the grid responsive */
+@media (max-width: 768px) {
+    .image-grid {
+        flex-direction: column;
+    }
+    
+    .image-item {
+        min-width: 100%;
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+.demo-video-section {
+    margin: 40px auto;
+    width: 70%;
+    max-width: 1000px;
+}
+
+.demo-video-section .video-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.demo-video-section .main-video {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Video Grid */
+.video-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.video-item {
+    flex: 1;
+    min-width: calc(33% - 20px);
+    max-width: calc(33% - 20px);
+    text-align: center;
+}
+
+.video-item .video-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.video-item .main-video {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.video-caption {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    margin-top: 15px;
+    font-family: 'Google Sans', sans-serif;
+}
+
+/* Make the video grid responsive */
+@media (max-width: 768px) {
+    .video-grid {
+        flex-direction: column;
+    }
+    
+    .video-item {
+        min-width: 100%;
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+/* Task Section Styles */
+.task-section {
+    margin: 40px 0;
+}
+
+.task-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    padding-top: 10px;
+    width: 100%;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* The dots/bullets/indicators */
+.dots-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Make the slideshow responsive */
+@media (max-width: 768px) {
+    .slideshow-container {
+        width: 100%;
+    }
+    
+    .prev, .next {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .text {
+        font-size: 12px;
+    }
+}
+
+/* Button styles - matching ReKep design */
+.button-container {
+    color: #53565A;
+    justify-items: center;
+    padding-top: 1.5em;
+    padding-bottom: 0.3em;
+    justify-content: center;
+    display: flex;
+}
+
+.button {
+    color: #53565A;
+    font-family: 'Google Sans', sans-serif;
+    border-radius: 0.5em;
+    width: 6em;
+    height: 2.2em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    vertical-align: middle;
+    border: solid 0px transparent;
+    background-color: #f2f2f2;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #f2f2f2;
+    filter: brightness(97%);
+} 
