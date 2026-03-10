@@ -17,14 +17,41 @@
     </head>
 <body>
 
-<section class="hero">
+<section class="hero white-section">
     <div class="hero-body">
+        <div class="title-section">
+            <h1 class="main-title">
+                EgoThumb: A Vision-Driven Supernumerary Robotic Thumb<br>
+                for Autonomous Grasp and Holding Assistance
+            </h1>
+        </div>
         <div class="container">
-            <div class="title-section">
-                <h1 class="main-title">
-            EgoThumb: A Vision-Driven Supernumerary Robotic Thumb<br>
-            for Autonomous Grasp and Holding Assistance
-        </h1>
+            <div class="pull-figure-section">
+                <div class="pull-figure-container">
+                    <img class="pull-figure-image" src="assets/media/images/teaser.png" alt="EgoThumb System Overview">
+                    <p class="pull-figure-caption"> Overview of our EgoThumb System. (1) EgoThumb Design: We present a fully open-source, vision-driven supernumerary robotic thumb, featuring a compact, tendon-driven mechanism with forearm-mounted actuation. (2) Different Tasks: EgoThumb enables a single hand to independently execute complex tasks that typically require bimanual coordination. (3) Universally Wearable: The device is secured via adjustable hook-and-loop straps, ensuring seamless physical adaptation across diverse hand morphologies. (4) Different Environments: The system achieves strong generalization performance across varied, unstructured environments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gray-section">
+    <div class="content-section">
+        <h2 class="section-title centered-title">Abstract</h2>
+    <p class="abstract-text">
+        Supernumerary robotic fingers augment human dexterity by enabling a single hand to perform complex "hold-and-manipulate" tasks that typically require bimanual coordination. However, existing devices are often hindered by bulky hardware that restricts interaction with multi-scale objects and rely on explicit hand motion triggers that lack environmental context. To address these challenges, we present EgoThumb, a fully open-source, vision-driven supernumerary robotic thumb. EgoThumb features a compact, dual tendon-driven design with forearm-mounted actuation, enabling precise active joint control. The system utilizes a visual imitation learning policy that maps egocentric images from a palm-mounted camera directly to continuous joint positions. By implicitly decoding human intent from visual cues capturing both the hand and the object of interest, EgoThumb achieves robust autonomous manipulation and strong generalization across diverse users and environments. All hardware designs and software implementations will be fully open-sourced upon acceptance.
+    </p>
+    </div>
+</section>
+
+<section class="white-section method-section">
+    <div class="container">
+        <h2 class="section-title centered-title">Overview of the EgoThumb System Design</h2>
+        <div class="pull-figure-section">
+            <div class="pull-figure-container">
+                <img class="pull-figure-image" src="assets/media/images/method.png" alt="EgoThumb System Design">
+                <p class="pull-figure-caption">Overview of the EgoThumb System Design. 1) On-body View: The system comprises a wearable thumb and a forearm-mounted actuation module. 2) Wearable Thumb: The thumb features dual tendon-driven joints for precise control and silicone-coated PLA phalanges for stable grasping. A palm-mounted fisheye camera provides egocentric visual feedback. 3) Actuation Module: The actuation module houses three Dynamixel XL430-driven ratchet spools. This forearm-mounted configuration significantly reduces distal weight. 4) Control System: Our EgoThumb interfaces with teleoperation and deployment systems via custom communication middleware.</p>
             </div>
         </div>
     </div>
