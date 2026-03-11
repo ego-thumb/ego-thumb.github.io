@@ -57,5 +57,76 @@
     </div>
 </section>
 
+<section class="gray-section">
+    <div class="container">
+        <h2 class="section-title centered-title">Execution Sequences for the Four Evaluation Tasks</h2>
+        <div class="pull-figure-section">
+            <div class="pull-figure-container">
+                <img class="pull-figure-image" src="assets/media/images/tasks.png" alt="Execution Sequences for the Four Evaluation Tasks">
+                <p class="pull-figure-caption">Execution Sequences for the Four Evaluation Tasks. Policy rollouts demonstrating collaborative human-robot manipulation across four tasks: Stir Tea, Transfer Ball, Unscrew Cap, and Pick Up Cube. For each task, the top row displays the user’s first-person view of the interaction, while the bottom row shows the corresponding egocentric palm camera view used by the policy. The timelines below outline the coordinated sequence of autonomous EgoThumb actions and human motions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="white-section">
+    <div class="container">
+        <h2 class="section-title centered-title">Task Area and “In-the-Wild” Environments</h2>
+        <div class="pull-figure-section">
+            <div class="pull-figure-container">
+                <div class="env-layout">
+                    <div class="env-image-col">
+                        <img class="pull-figure-image" src="assets/media/images/env.png" alt="Task Area and In-the-Wild Environments">
+                    </div>
+                    <div class="env-text-col">
+                        <p class="pull-figure-caption">Task Area and “In-the-Wild” Environments. Top (Task Area): Darker areas represent the initial and target areas for training data, while the larger, lighter areas (including the original darker areas) represent the expanded areas used for the robustness test of object distributions. Pick Up Cube and Unscrew Cap utilize the green areas, expanded from 10 cm × 10 cm to 50 cm × 10 cm. Transfer Ball and Stir Tea use red for pick-up and blue for drop-off, expanded from 10 cm × 10 cm to 30 cm × 25 cm. For the Transfer Ball task, expanding the evaluation area shifts the target receptacle’s position (“Target Change”). Bottom (“In-the-wild” Environments): The “Seen Environments” panel displays the diverse environments included in the broadened training dataset. The “Unseen Environments” panel displays completely novel backgrounds used strictly to test out-of-distribution generalization. Labels #1 and #2 denote the specific seen and unseen test environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gray-section results-section">
+    <div class="container">
+        <h2 class="section-title centered-title">Results</h2>
+        <div class="pull-figure-section table-figure">
+            <div class="pull-figure-container">
+                <h3 class="subsection-title">Success Rates across Different Hands</h3>
+                <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_diff_hands.png" alt="TABLE I: Success Rates across Different Hands">
+                <p class="pull-figure-caption">Success Rates across Different Hands. We report the performance when objects are placed within initial and target areas in the training data. EgoThumb achieves high performance across all four tasks when operated by the demonstrator, and it generalizes effectively to novel participants (User 1 and User 2).</p>
+            </div>
+        </div>
+        <div class="pull-figure-section table-figure">
+            <div class="pull-figure-container">
+                <h3 class="subsection-title">Success Rates with Expanded Task Areas</h3>
+                <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_enlarge.png" alt="TABLE II: Success Rates with Expanded Task Areas">
+                <p class="pull-figure-caption">Success Rates with Expanded Task Areas. We evaluate robustness when initial and target areas are expanded. Performance is reported for the demonstrator and two novel users across the four tasks.</p>
+            </div>
+        </div>
+        <div class="pull-figure-section table-figure">
+            <div class="pull-figure-container">
+                <h3 class="subsection-title">Task Success Rates Across Different Backgrounds</h3>
+                <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_diff_envs.png" alt="TABLE III: Task Success Rates Across Different Backgrounds">
+                <p class="pull-figure-caption">Task Success Rates Across Different Backgrounds. We evaluate our policy on two seen and two unseen environments using the Stir Tea Task. The policy maintains robust performance across both seen and entirely novel (unseen) backgrounds for all users.</p>
+            </div>
+        </div>
+        <div class="pull-figure-section table-figure">
+            <div class="pull-figure-container">
+                <h3 class="subsection-title">Ablation Study Results</h3>
+                <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_abl.png" alt="TABLE IV: Ablation Study Results">
+                <p class="pull-figure-caption">Ablation Study Results. Disabling either latency matching or image cropping results in catastrophic policy failure, confirming their necessity for robust visuo-motor control.</p>
+            </div>
+        </div>
+        <div class="pull-figure-section">
+            <div class="pull-figure-container">
+                <h3 class="subsection-title">Impact of Training Data Scale on Generalization</h3>
+                <img class="pull-figure-image" src="assets/media/images/diff_training.png" alt="Impact of Training Data Scale on Generalization">
+                <p class="pull-figure-caption">Impact of Training Data Scale on Generalization. Scaling the demonstrations from 25 to 105 generally improves policy performance in both seen (solid lines) and unseen (dashed lines) environments across all users, showing that more data drives robust out-of-distribution generalization.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
