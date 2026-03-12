@@ -224,7 +224,9 @@
     function safePlay(video) {
         var playPromise = video.play();
         if (playPromise !== undefined) {
-            playPromise.catch(function () {});
+            playPromise.catch(function () {
+                video.controls = true;
+            });
         }
     }
 

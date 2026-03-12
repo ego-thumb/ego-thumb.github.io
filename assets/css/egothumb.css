@@ -520,6 +520,30 @@ footer {
     .text {
         font-size: 12px;
     }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .video-grid > :nth-child(1) { order: 1; }
+    .video-grid > :nth-child(2) { order: 4; }
+    .video-grid > :nth-child(3) { order: 7; }
+    .video-grid > :nth-child(4) { order: 2; }
+    .video-grid > :nth-child(5) { order: 5; }
+    .video-grid > :nth-child(6) { order: 8; }
+    .video-grid > :nth-child(7) { order: 3; }
+    .video-grid > :nth-child(8) { order: 6; }
+    .video-grid > :nth-child(9) { order: 9; }
+
+    .video-grid .col-label {
+        margin-top: 12px;
+        font-size: 1rem;
+    }
+
+    .video-grid video {
+        border-radius: 6px;
+    }
 }
 
 /* Button styles - matching ReKep design */
