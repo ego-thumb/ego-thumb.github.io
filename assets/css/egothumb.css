@@ -520,19 +520,6 @@ footer {
     .text {
         font-size: 12px;
     }
-
-    .video-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 6px;
-    }
-
-    .video-grid .col-label {
-        display: none;
-    }
-
-    .video-grid video {
-        border-radius: 4px;
-    }
 }
 
 /* Button styles - matching ReKep design */
@@ -582,6 +569,20 @@ footer {
 
 .video-grid video {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        gap: 6px;
+    }
+
+    .video-grid .col-label {
+        display: none;
+    }
+
+    .video-grid video {
+        border-radius: 4px;
+    }
 }
 
 .video-controls {
