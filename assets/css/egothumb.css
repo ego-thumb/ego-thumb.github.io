@@ -180,10 +180,22 @@ body {
     font-size: 1rem;
     text-align: justify;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 40px;
     line-height: 1.4;
     color: #2c2c2c;
     font-family: 'Google Sans', sans-serif;
+}
+
+.abstract-video-container {
+    margin-top: 25px;
+}
+
+.abstract-video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 hr.rounded {
@@ -414,6 +426,11 @@ footer {
     display: none;
 }
 
+.mySlides.fade {
+    animation-name: fade;
+    animation-duration: 0.6s;
+}
+
 /* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
@@ -537,4 +554,38 @@ footer {
 .button:hover {
     background-color: #f2f2f2;
     filter: brightness(97%);
-} 
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    text-align: center;
+}
+
+.video-grid .col-label {
+    font-weight: bold;
+}
+
+.video-grid video {
+    width: 100%;
+}
+
+.video-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.video-controls button {
+    padding: 6px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.video-controls input[type="range"] {
+    flex: 1;
+    cursor: pointer;
+}

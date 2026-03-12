@@ -25,12 +25,88 @@
                 for Autonomous Grasp and Holding Assistance
             </h1>
         </div>
-        <div class="container">
-            <div class="pull-figure-section">
-                <div class="pull-figure-container">
-                    <img class="pull-figure-image" src="assets/media/images/teaser.png" alt="EgoThumb System Overview">
-                    <p class="pull-figure-caption"><strong>Overview of our EgoThumb System.</strong> <strong>(1) EgoThumb Design:</strong> We present a fully open-source, vision-driven supernumerary robotic thumb, featuring a compact, tendon-driven mechanism with forearm-mounted actuation. <strong>(2) Different Tasks:</strong> EgoThumb enables a single hand to independently execute complex tasks that typically require bimanual coordination. <strong>(3) Universally Wearable:</strong> The device is secured via adjustable hook-and-loop straps, ensuring seamless physical adaptation across diverse hand morphologies. <strong>(4) Different Environments:</strong> The system achieves strong generalization performance across varied, unstructured environments.</p>
+    </div>
+</section>
+
+<section class="gray-section">
+    <div class="container">
+        <h2 class="section-title centered-title">Task Videos</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade" data-slide="0">
+                <h3 class="task-title">Pick Up Cube</h3>
+                <div class="video-grid">
+                    <div class="col-label">Demonstrator</div>
+                    <div class="col-label">User 1</div>
+                    <div class="col-label">User 2</div>
+
+                    <video class="sync-video" muted playsinline preload="auto">
+                        <source src="assets/media/videos/regular/pick_up/demo_phone_cut.mp4" type="video/mp4">
+                    </video>
+                    <video class="sync-video" muted playsinline preload="auto">
+                        <source src="assets/media/videos/regular/pick_up/user1_phone_cut.mp4" type="video/mp4">
+                    </video>
+                    <video class="sync-video" muted playsinline preload="auto">
+                        <source src="assets/media/videos/regular/pick_up/user2_phone_cut.mp4" type="video/mp4">
+                    </video>
+
+                    <video class="sync-video" muted playsinline preload="auto">
+                        <source src="assets/media/videos/regular/pick_up/demo_cut_mosaic.mp4" type="video/mp4">
+                    </video>
+                    <video class="sync-video" muted playsinline preload="auto">
+                        <source src="assets/media/videos/regular/pick_up/user1_cut_mosaic.mp4" type="video/mp4">
+                    </video>
+                    <video class="sync-video" muted playsinline preload="auto">
+                        <source src="assets/media/videos/regular/pick_up/user2_cut.mp4" type="video/mp4">
+                    </video>
                 </div>
+            </div>
+
+            <div class="mySlides fade" data-slide="1">
+                <h3 class="task-title">Unscrew Cap</h3>
+                <div class="video-grid">
+                    <div class="col-label">Demonstrator</div>
+                    <div class="col-label">User 1</div>
+                    <div class="col-label">User 2</div>
+
+                    <video class="sync-video" muted playsinline preload="auto">
+                        <source src="assets/media/videos/regular/unscrew_cap/demo_phone_cut.mp4" type="video/mp4">
+                    </video>
+                    <video class="sync-video" muted playsinline preload="auto">
+                        <source src="assets/media/videos/regular/unscrew_cap/user1_phone_cut.mp4" type="video/mp4">
+                    </video>
+                    <video class="sync-video" muted playsinline preload="auto">
+                        <source src="assets/media/videos/regular/unscrew_cap/user2_phone_cut.mp4" type="video/mp4">
+                    </video>
+
+                    <video class="sync-video" muted playsinline preload="auto">
+                        <source src="assets/media/videos/regular/unscrew_cap/demo_cut.mp4" type="video/mp4">
+                    </video>
+                    <video class="sync-video" muted playsinline preload="auto">
+                        <source src="assets/media/videos/regular/unscrew_cap/user1_cut_mosaic.mp4" type="video/mp4">
+                    </video>
+                    <video class="sync-video" muted playsinline preload="auto">
+                        <source src="assets/media/videos/regular/unscrew_cap/user2_cut.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+
+        <div class="dots-container">
+            <span class="dot" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+        </div>
+    </div>
+</section>
+
+<section class="white-section">
+    <div class="container">
+        <div class="pull-figure-section">
+            <div class="pull-figure-container">
+                <img class="pull-figure-image" src="assets/media/images/teaser.png" alt="EgoThumb System Overview">
+                <p class="pull-figure-caption"><strong>Overview of our EgoThumb System.</strong> <strong>(1) EgoThumb Design:</strong> We present a fully open-source, vision-driven supernumerary robotic thumb, featuring a compact, tendon-driven mechanism with forearm-mounted actuation. <strong>(2) Different Tasks:</strong> EgoThumb enables a single hand to independently execute complex tasks that typically require bimanual coordination. <strong>(3) Universally Wearable:</strong> The device is secured via adjustable hook-and-loop straps, ensuring seamless physical adaptation across diverse hand morphologies. <strong>(4) Different Environments:</strong> The system achieves strong generalization performance across varied, unstructured environments.</p>
             </div>
         </div>
     </div>
@@ -42,6 +118,13 @@
     <p class="abstract-text">
         Supernumerary robotic fingers augment human dexterity by enabling a single hand to perform complex "hold-and-manipulate" tasks that typically require bimanual coordination. However, existing devices are often hindered by bulky hardware that restricts interaction with multi-scale objects and rely on explicit hand motion triggers that lack environmental context. To address these challenges, we present EgoThumb, a fully open-source, vision-driven supernumerary robotic thumb. EgoThumb features a compact, dual tendon-driven design with forearm-mounted actuation, enabling precise active joint control. The system utilizes a visual imitation learning policy that maps egocentric images from a palm-mounted camera directly to continuous joint positions. By implicitly decoding human intent from visual cues capturing both the hand and the object of interest, EgoThumb achieves robust autonomous manipulation and strong generalization across diverse users and environments. All hardware designs and software implementations will be fully open-sourced upon acceptance.
     </p>
+        <h2 class="section-title centered-title">Video</h2>
+        <div class="abstract-video-container">
+            <video class="abstract-video" controls playsinline preload="auto">
+                <source src="assets/media/videos/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </div>
 </section>
 
@@ -127,6 +210,69 @@
         </div>
     </div>
 </section>
+
+<script>
+(function () {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.mySlides');
+    const dots = document.querySelectorAll('.dot');
+
+    function getSlideVideos(index) {
+        return Array.from(slides[index].querySelectorAll('.sync-video'));
+    }
+
+    function resetAndPlayVideos(index) {
+        const videos = getSlideVideos(index);
+        videos.forEach(v => { v.loop = false; v.pause(); v.currentTime = 0; });
+        setTimeout(() => { videos.forEach(v => v.play()); }, 100);
+    }
+
+    function pauseVideos(index) {
+        getSlideVideos(index).forEach(v => { v.pause(); v.currentTime = 0; });
+    }
+
+    function showSlide(index) {
+        slides.forEach((s, i) => {
+            s.style.display = (i === index) ? 'block' : 'none';
+        });
+        dots.forEach((d, i) => {
+            d.classList.toggle('active', i === index);
+        });
+    }
+
+    function switchToSlide(index) {
+        if (index === currentSlide) return;
+        pauseVideos(currentSlide);
+        currentSlide = index;
+        showSlide(currentSlide);
+        resetAndPlayVideos(currentSlide);
+    }
+
+    window.changeSlide = function (dir) {
+        let next = (currentSlide + dir + slides.length) % slides.length;
+        switchToSlide(next);
+    };
+
+    window.goToSlide = function (index) {
+        switchToSlide(index);
+    };
+
+    slides.forEach((slide, idx) => {
+        const videos = Array.from(slide.querySelectorAll('.sync-video'));
+        videos.forEach(v => {
+            v.addEventListener('ended', () => {
+                if (videos.every(o => o.ended)) {
+                    videos.forEach(o => { o.currentTime = 0; });
+                    setTimeout(() => { videos.forEach(o => o.play()); }, 100);
+                }
+            });
+        });
+    });
+
+    showSlide(0);
+    resetAndPlayVideos(0);
+})();
+</script>
 
 </body>
 </html>

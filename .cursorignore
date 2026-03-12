@@ -1,0 +1,7 @@
+assets/media/videos/**
+media/videos/**
+*.mp4
+*.mov
+*.webm
+*.avi
+*.mkv
