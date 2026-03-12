@@ -569,6 +569,9 @@ footer {
 
 .video-grid video {
     width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -577,7 +580,7 @@ footer {
     }
 
     .video-grid .col-label {
-        display: none;
+        font-size: 0.7rem;
     }
 
     .video-grid video {
