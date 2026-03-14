@@ -60,16 +60,11 @@
                 </video>
             </div>
 
-            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            <a class="prev" onclick="this.closest('.slideshow-container')._changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="this.closest('.slideshow-container')._changeSlide(1)">&#10095;</a>
         </div>
 
-        <div class="dots-container">
-            <span class="dot" onclick="goToSlide(0)"></span>
-            <span class="dot" onclick="goToSlide(1)"></span>
-            <span class="dot" onclick="goToSlide(2)"></span>
-            <span class="dot" onclick="goToSlide(3)"></span>
-        </div>
+        <div class="dots-container" data-slideshow></div>
     </div>
 </section>
 
@@ -148,6 +143,35 @@
         <div class="pull-figure-section table-figure">
             <div class="pull-figure-container">
                 <h3 class="subsection-title">Success Rates across Different Hands</h3>
+                <div class="slideshow-container">
+                    <div class="mySlides fade" data-slide="0">
+                        <h3 class="task-title">Pick Up Cube</h3>
+                        <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                            <source src="assets/media/videos/regular/pick_up/regular_pick_up.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="mySlides fade" data-slide="1">
+                        <h3 class="task-title">Unscrew Cap</h3>
+                        <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                            <source src="assets/media/videos/regular/unscrew_cap/regular_unscrew_cap.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="mySlides fade" data-slide="2">
+                        <h3 class="task-title">Stir Tea</h3>
+                        <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                            <source src="assets/media/videos/regular/stir_tea/regular_stir_tea.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="mySlides fade" data-slide="3">
+                        <h3 class="task-title">Transfer Ball</h3>
+                        <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                            <source src="assets/media/videos/regular/transfer_ball/regular_transfer_ball.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <a class="prev" onclick="this.closest('.slideshow-container')._changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="this.closest('.slideshow-container')._changeSlide(1)">&#10095;</a>
+                </div>
+                <div class="dots-container" data-slideshow></div>
                 <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_diff_hands.png" alt="TABLE I: Success Rates across Different Hands">
                 <p class="pull-figure-caption"><strong>Success Rates across Different Hands.</strong> We report the performance when objects are placed within initial and target areas in the training data. EgoThumb achieves high performance across all four tasks when operated by the demonstrator, and it generalizes effectively to novel participants (User 1 and User 2).</p>
             </div>
@@ -155,6 +179,35 @@
         <div class="pull-figure-section table-figure">
             <div class="pull-figure-container">
                 <h3 class="subsection-title">Success Rates with Expanded Task Areas</h3>
+                <div class="slideshow-container">
+                    <div class="mySlides fade" data-slide="0">
+                        <h3 class="task-title">Pick Up Cube</h3>
+                        <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                            <source src="assets/media/videos/large/pick_up/large_pick_up.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- <div class="mySlides fade" data-slide="1">
+                        <h3 class="task-title">Unscrew Cap</h3>
+                        <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                            <source src="assets/media/videos/large/unscrew_cap/large_unscrew_cap.mp4" type="video/mp4">
+                        </video>
+                    </div> -->
+                    <div class="mySlides fade" data-slide="2">
+                        <h3 class="task-title">Stir Tea</h3>
+                        <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                            <source src="assets/media/videos/large/stir_tea/large_stir_tea.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- <div class="mySlides fade" data-slide="3">
+                        <h3 class="task-title">Transfer Ball</h3>
+                        <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                            <source src="assets/media/videos/large/transfer_ball/large_transfer_ball.mp4" type="video/mp4">
+                        </video>
+                    </div> -->
+                    <a class="prev" onclick="this.closest('.slideshow-container')._changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="this.closest('.slideshow-container')._changeSlide(1)">&#10095;</a>
+                </div>
+                <div class="dots-container" data-slideshow></div>
                 <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_enlarge.png" alt="TABLE II: Success Rates with Expanded Task Areas">
                 <p class="pull-figure-caption"><strong>Success Rates in Expanded Initial and Target Areas.</strong> We evaluate our system on an expanded initial and target areas compared to the training data. Results show strong robustness on <strong>Pick Up Cube</strong> and <strong>Unscrew Cap</strong>, moderate robustness on <strong>Stir Tea</strong>, and a clear drop on <strong>Transfer Ball</strong>, likely due to increased foreground visual variation and its longer-horizon manipulation requirements.</p>
             </div>
@@ -185,70 +238,50 @@
 
 <script>
 (function () {
-    var currentSlide = 0;
-    var slides = document.querySelectorAll('.mySlides');
-    var dots = document.querySelectorAll('.dot');
+    var containers = document.querySelectorAll('.slideshow-container');
 
-    function getVideo(index) {
-        return slides[index].querySelector('.task-video');
-    }
+    containers.forEach(function (container) {
+        var slides = Array.from(container.querySelectorAll('.mySlides'));
+        var dotsContainer = container.nextElementSibling;
+        var current = 0;
 
-    function safePlay(video) {
-        var p = video.play();
-        if (p !== undefined) {
-            p.catch(function () { video.controls = true; });
+        slides.forEach(function (_, i) {
+            var dot = document.createElement('span');
+            dot.className = 'dot';
+            dot.addEventListener('click', function () { switchTo(i); });
+            dotsContainer.appendChild(dot);
+        });
+        var dots = Array.from(dotsContainer.querySelectorAll('.dot'));
+
+        function safePlay(video) {
+            video.currentTime = 0;
+            var p = video.play();
+            if (p !== undefined) p.catch(function () { video.controls = true; });
         }
-    }
 
-    function waitForReady(video) {
-        return new Promise(function (resolve) {
-            if (video.readyState >= 3) {
-                resolve();
-            } else {
-                video.addEventListener('canplay', function onCanPlay() {
-                    video.removeEventListener('canplay', onCanPlay);
-                    resolve();
-                });
-            }
-        });
-    }
-
-    function showSlide(index) {
-        slides.forEach(function (s, i) {
-            s.style.display = (i === index) ? 'block' : 'none';
-        });
-        dots.forEach(function (d, i) {
-            d.classList.toggle('active', i === index);
-        });
-    }
-
-    function switchToSlide(index) {
-        if (index === currentSlide) return;
-        var oldVideo = getVideo(currentSlide);
-        if (oldVideo) { oldVideo.pause(); oldVideo.currentTime = 0; }
-        currentSlide = index;
-        showSlide(currentSlide);
-        var newVideo = getVideo(currentSlide);
-        if (newVideo) {
-            newVideo.currentTime = 0;
-            waitForReady(newVideo).then(function () { safePlay(newVideo); });
+        function show(index) {
+            slides.forEach(function (s, i) { s.style.display = (i === index) ? 'block' : 'none'; });
+            dots.forEach(function (d, i) { d.classList.toggle('active', i === index); });
         }
-    }
 
-    window.changeSlide = function (dir) {
-        var next = (currentSlide + dir + slides.length) % slides.length;
-        switchToSlide(next);
-    };
+        function switchTo(index) {
+            if (index === current) return;
+            var oldV = slides[current].querySelector('.task-video');
+            if (oldV) { oldV.pause(); oldV.currentTime = 0; }
+            current = index;
+            show(current);
+            var newV = slides[current].querySelector('.task-video');
+            if (newV) safePlay(newV);
+        }
 
-    window.goToSlide = function (index) {
-        switchToSlide(index);
-    };
+        container._changeSlide = function (dir) {
+            switchTo((current + dir + slides.length) % slides.length);
+        };
 
-    showSlide(0);
-    var firstVideo = getVideo(0);
-    if (firstVideo) {
-        waitForReady(firstVideo).then(function () { safePlay(firstVideo); });
-    }
+        show(0);
+        var firstVideo = slides[0].querySelector('.task-video');
+        if (firstVideo) safePlay(firstVideo);
+    });
 })();
 </script>
 
