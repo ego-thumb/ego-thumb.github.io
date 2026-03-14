@@ -105,24 +105,39 @@ body {
     }
 }
 
-/* Results table figures */
-.results-section .table-figure {
-    margin-bottom: 48px;
+/* Result subsections */
+.result-subsection {
+    background: #f7f7f7;
+    border-radius: 12px;
+    padding: 32px 28px;
+    margin-bottom: 32px;
 }
 
-.results-section .table-figure:last-of-type {
+.result-subsection:last-child {
     margin-bottom: 0;
 }
 
-.results-section .results-table-img {
+.result-subsection .results-table-img {
     max-width: 100%;
+    margin-top: 16px;
+}
+
+.result-subsection .pull-figure-caption {
+    margin-top: 16px;
+}
+
+.result-subsection .dots-container {
+    margin-bottom: 24px;
 }
 
 .subsection-title {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #555;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    margin-top: 0;
+    color: #333;
+    font-weight: 600;
     font-family: 'Google Sans', sans-serif;
+    text-align: center;
 }
 
 /* Gray Background Section */
