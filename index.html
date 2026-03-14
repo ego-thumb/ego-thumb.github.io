@@ -197,24 +197,24 @@
                         <source src="assets/media/videos/large/pick_up/large_pick_up.mp4" type="video/mp4">
                     </video>
                 </div>
-                <!-- <div class="mySlides fade" data-slide="1">
+                <div class="mySlides fade" data-slide="1">
                     <h3 class="task-title">Unscrew Cap</h3>
                     <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
                         <source src="assets/media/videos/large/unscrew_cap/large_unscrew_cap.mp4" type="video/mp4">
                     </video>
-                </div> -->
+                </div>
                 <div class="mySlides fade" data-slide="2">
                     <h3 class="task-title">Stir Tea</h3>
                     <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
                         <source src="assets/media/videos/large/stir_tea/large_stir_tea.mp4" type="video/mp4">
                     </video>
                 </div>
-                <!-- <div class="mySlides fade" data-slide="3">
+                <div class="mySlides fade" data-slide="3">
                     <h3 class="task-title">Transfer Ball</h3>
                     <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
                         <source src="assets/media/videos/large/transfer_ball/large_transfer_ball.mp4" type="video/mp4">
                     </video>
-                </div> -->
+                </div>
                 <a class="prev" onclick="this.closest('.slideshow-container')._changeSlide(-1)">&#10094;</a>
                 <a class="next" onclick="this.closest('.slideshow-container')._changeSlide(1)">&#10095;</a>
             </div>
@@ -225,8 +225,24 @@
         </div>
 
         <div class="result-subsection">
+            <div class="slideshow-container">
+                <div class="mySlides fade" data-slide="0">
+                    <h3 class="task-title">Seen Env #1</h3>
+                    <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                        <source src="assets/media/videos/env/seen1/seen1_stir_tea.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="mySlides fade" data-slide="1">
+                    <h3 class="task-title">Seen Env #2</h3>
+                    <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                        <source src="assets/media/videos/env/seen2/seen2_stir_tea.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <a class="prev" onclick="this.closest('.slideshow-container')._changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="this.closest('.slideshow-container')._changeSlide(1)">&#10095;</a>
+            </div>
+            <div class="dots-container" data-slideshow></div>
             <h3 class="subsection-title">Task Success Rates Across Different Backgrounds</h3>
-            <!-- Video slideshow placeholder for future use -->
             <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_diff_envs.png" alt="TABLE III: Task Success Rates Across Different Backgrounds">
             <p class="pull-figure-caption"><strong>Task Success Rates Across Different Backgrounds.</strong> We evaluate our policy on two seen and two unseen environments using the Stir Tea Task. The policy maintains robust performance across both seen and entirely novel (unseen) backgrounds for all users.</p>
         </div>
