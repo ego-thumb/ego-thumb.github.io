@@ -155,6 +155,9 @@
         <h2 class="section-title centered-title">Results</h2>
 
         <div class="result-subsection">
+            <h3 class="subsection-title">Success Rates across Different Hands</h3>
+            <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_diff_hands.png" alt="TABLE I: Success Rates across Different Hands">
+            <p class="pull-figure-caption"><strong>Success Rates across Different Hands.</strong> We report the performance when objects are placed within initial and target areas in the training data. EgoThumb achieves high performance across all four tasks when operated by the demonstrator, and it generalizes effectively to novel participants (User 1 and User 2).</p>
             <div class="slideshow-container">
                 <div class="mySlides fade" data-slide="0">
                     <h3 class="task-title">Pick Up Cube</h3>
@@ -184,12 +187,12 @@
                 <a class="next" onclick="this.closest('.slideshow-container')._changeSlide(1)">&#10095;</a>
             </div>
             <div class="dots-container" data-slideshow></div>
-            <h3 class="subsection-title">Success Rates across Different Hands</h3>
-            <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_diff_hands.png" alt="TABLE I: Success Rates across Different Hands">
-            <p class="pull-figure-caption"><strong>Success Rates across Different Hands.</strong> We report the performance when objects are placed within initial and target areas in the training data. EgoThumb achieves high performance across all four tasks when operated by the demonstrator, and it generalizes effectively to novel participants (User 1 and User 2).</p>
         </div>
 
         <div class="result-subsection">
+            <h3 class="subsection-title">Success Rates with Expanded Task Areas</h3>
+            <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_enlarge.png" alt="TABLE II: Success Rates with Expanded Task Areas">
+            <p class="pull-figure-caption"><strong>Success Rates in Expanded Initial and Target Areas.</strong> We evaluate our system on an expanded initial and target areas compared to the training data. Results show strong robustness on <strong>Pick Up Cube</strong> and <strong>Unscrew Cap</strong>, moderate robustness on <strong>Stir Tea</strong>, and a clear drop on <strong>Transfer Ball</strong>, likely due to increased foreground visual variation and its longer-horizon manipulation requirements.</p>
             <div class="slideshow-container">
                 <div class="mySlides fade" data-slide="0">
                     <h3 class="task-title">Pick Up Cube</h3>
@@ -219,12 +222,12 @@
                 <a class="next" onclick="this.closest('.slideshow-container')._changeSlide(1)">&#10095;</a>
             </div>
             <div class="dots-container" data-slideshow></div>
-            <h3 class="subsection-title">Success Rates with Expanded Task Areas</h3>
-            <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_enlarge.png" alt="TABLE II: Success Rates with Expanded Task Areas">
-            <p class="pull-figure-caption"><strong>Success Rates in Expanded Initial and Target Areas.</strong> We evaluate our system on an expanded initial and target areas compared to the training data. Results show strong robustness on <strong>Pick Up Cube</strong> and <strong>Unscrew Cap</strong>, moderate robustness on <strong>Stir Tea</strong>, and a clear drop on <strong>Transfer Ball</strong>, likely due to increased foreground visual variation and its longer-horizon manipulation requirements.</p>
         </div>
 
         <div class="result-subsection">
+            <h3 class="subsection-title">Task Success Rates Across Different Backgrounds</h3>
+            <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_diff_envs.png" alt="TABLE III: Task Success Rates Across Different Backgrounds">
+            <p class="pull-figure-caption"><strong>Task Success Rates Across Different Backgrounds.</strong> We evaluate our policy on two seen and two unseen environments using the Stir Tea Task. The policy maintains robust performance across both seen and entirely novel (unseen) backgrounds for all users.</p>
             <div class="slideshow-container">
                 <div class="mySlides fade" data-slide="0">
                     <h3 class="task-title">Seen Env #1</h3>
@@ -238,13 +241,22 @@
                         <source src="assets/media/videos/env/seen2/seen2_stir_tea.mp4" type="video/mp4">
                     </video>
                 </div>
+                <div class="mySlides fade" data-slide="2">
+                    <h3 class="task-title">Unseen Env #1</h3>
+                    <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                        <source src="assets/media/videos/env/unseen1/unseen1_stir_tea.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="mySlides fade" data-slide="3">
+                    <h3 class="task-title">Unseen Env #2</h3>
+                    <video class="task-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                        <source src="assets/media/videos/env/unseen2/unseen2_stir_tea.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <a class="prev" onclick="this.closest('.slideshow-container')._changeSlide(-1)">&#10094;</a>
                 <a class="next" onclick="this.closest('.slideshow-container')._changeSlide(1)">&#10095;</a>
             </div>
             <div class="dots-container" data-slideshow></div>
-            <h3 class="subsection-title">Task Success Rates Across Different Backgrounds</h3>
-            <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_diff_envs.png" alt="TABLE III: Task Success Rates Across Different Backgrounds">
-            <p class="pull-figure-caption"><strong>Task Success Rates Across Different Backgrounds.</strong> We evaluate our policy on two seen and two unseen environments using the Stir Tea Task. The policy maintains robust performance across both seen and entirely novel (unseen) backgrounds for all users.</p>
         </div>
 
         <div class="result-subsection">

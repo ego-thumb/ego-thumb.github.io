@@ -119,15 +119,15 @@ body {
 
 .result-subsection .results-table-img {
     max-width: 100%;
-    margin-top: 16px;
+    margin-top: 8px;
 }
 
 .result-subsection .pull-figure-caption {
     margin-top: 16px;
 }
 
-.result-subsection .dots-container {
-    margin-bottom: 24px;
+.result-subsection .slideshow-container {
+    margin-top: 24px;
 }
 
 .subsection-title {
