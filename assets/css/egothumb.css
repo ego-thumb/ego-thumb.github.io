@@ -111,7 +111,7 @@ body {
 
 /* Result intro statements */
 .result-intro {
-    text-align: left;
+    text-align: justify;
     margin-bottom: 32px;
 }
 
@@ -160,7 +160,7 @@ body {
     color: #222;
     font-weight: 600;
     font-family: 'Google Sans', sans-serif;
-    text-align: left;
+    text-align: justify;
     line-height: 1.3;
 }
 
