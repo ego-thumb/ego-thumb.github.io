@@ -32,11 +32,12 @@
 
                 <div class="result-subsection">
                     <div class="result-intro">
-                        <p class="result-statement">Our wearable finger enables the human hand to perform concurrent tasks by providing stable grasp assistance.</p>
-                        <p class="result-statement">Our finger system demonstrates robustness across varying hand morphologies.</p>
+                        <p class="result-statement">1. Our wearable finger enables the human hand to perform concurrent tasks by providing stable grasp assistance.</p>
+                        <p class="result-statement">2. Our finger system demonstrates robustness across varying hand morphologies.</p>
                     </div>
                     <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_diff_hands.png" alt="TABLE I: Success Rates across Different Hands">
                     <p class="pull-figure-caption"><strong>Success Rates across Different Hands.</strong> We report the performance when objects are placed within initial and target areas in the training data. EgoThumb achieves high performance across all four tasks when operated by the demonstrator, and it generalizes effectively to novel participants (User 1 and User 2).</p>
+                    <h3 class="subsection-title-secondary" style="margin-top: 32px;">Rollout Videos</h3>
                     <div class="slideshow-container">
                         <div class="mySlides fade" data-slide="0">
                             <h3 class="task-title">Pick Up Cube</h3>
@@ -69,12 +70,10 @@
                 </div>
 
                 <div class="result-subsection">
-                    <h3 class="subsection-title">Our finger system demonstrates robustness across varying hand morphologies</h3>
+                    <h3 class="subsection-title">3. Our system is robust to variations in object distributions.</h3>
                     <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_enlarge.png" alt="TABLE II: Success Rates with Expanded Task Areas">
                     <p class="pull-figure-caption"><strong>Success Rates in Expanded Initial and Target Areas.</strong> We evaluate our system on an expanded initial and target areas compared to the training data. Results show strong robustness on <strong>Pick Up Cube</strong> and <strong>Unscrew Cap</strong>, moderate robustness on <strong>Stir Tea</strong>, and a clear drop on <strong>Transfer Ball</strong>, likely due to increased foreground visual variation and its longer-horizon manipulation requirements.</p>
-                    <h3 class="subsection-title-secondary" style="margin-top: 32px;">Impact of Training Data Scale on Generalization</h3>
-                    <img class="pull-figure-image" src="assets/media/images/diff_training.png" alt="Impact of Training Data Scale on Generalization">
-                    <p class="pull-figure-caption"><strong>Impact of Training Data Scale on Generalization.</strong> Scaling the demonstrations from 25 to 105 generally improves policy performance in both seen (solid lines) and unseen (dashed lines) environments across all users, showing that more data drives robust out-of-distribution generalization.</p>
+                    <h3 class="subsection-title-secondary" style="margin-top: 32px;">Rollout Videos</h3>
                     <div class="slideshow-container">
                         <div class="mySlides fade" data-slide="0">
                             <h3 class="task-title">Pick Up Cube</h3>
@@ -107,9 +106,10 @@
                 </div>
 
                 <div class="result-subsection">
-                    <h3 class="subsection-title">Our system is robust to variations in object distributions</h3>
+                    <h3 class="subsection-title">4. Our finger system demonstrates robustness to background variations.</h3>
                     <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_diff_envs.png" alt="TABLE III: Task Success Rates Across Different Backgrounds">
                     <p class="pull-figure-caption"><strong>Task Success Rates Across Different Backgrounds.</strong> We evaluate our policy on two seen and two unseen environments using the Stir Tea Task. The policy maintains robust performance across both seen and entirely novel (unseen) backgrounds for all users.</p>
+                    <h3 class="subsection-title-secondary" style="margin-top: 32px;">Rollout Videos</h3>
                     <div class="slideshow-container">
                         <div class="mySlides fade" data-slide="0">
                             <h3 class="task-title">Seen Env #1</h3>
@@ -139,6 +139,9 @@
                         <a class="next" onclick="this.closest('.slideshow-container')._changeSlide(1)">&#10095;</a>
                     </div>
                     <div class="dots-container" data-slideshow></div>
+                    <h3 class="subsection-title-secondary" style="margin-top: 32px;">Impact of Training Data Scale on Generalization</h3>
+                    <img class="pull-figure-image" src="assets/media/images/diff_training.png" alt="Impact of Training Data Scale on Generalization">
+                    <p class="pull-figure-caption"><strong>Impact of Training Data Scale on Generalization.</strong> Scaling the demonstrations from 25 to 105 generally improves policy performance in both seen (solid lines) and unseen (dashed lines) environments across all users, showing that more data drives robust out-of-distribution generalization.</p>
                 </div>
 
             </div>
