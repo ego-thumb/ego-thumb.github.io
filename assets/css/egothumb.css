@@ -30,13 +30,18 @@ body {
 }
 
 .main-title {
-    font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+    font-size: clamp(1.5rem, 3.2vw, 2.75rem);
     font-weight: bold;
     margin-bottom: 20px;
     line-height: 1.18;
     letter-spacing: -0.035em;
     color: #242c35;
     text-wrap: balance;
+}
+
+.main-title .title-line {
+    display: block;
+    white-space: nowrap;
 }
 
 .title-logo {
@@ -448,8 +453,13 @@ footer {
         padding: 0 20px;
     }
 
-    .main-title br {
-        display: none;
+    .main-title {
+        font-size: 1.85rem;
+    }
+
+    .main-title .title-line {
+        display: inline;
+        white-space: normal;
     }
 
     .publication-authors {
