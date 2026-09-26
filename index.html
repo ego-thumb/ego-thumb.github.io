@@ -66,12 +66,22 @@
                 <h2 class="section-title centered-title">Key Findings</h2>
 
                 <div class="result-subsection">
-                    <div class="result-intro">
-                        <p class="result-statement">1. Our wearable finger enables the human hand to perform concurrent tasks by providing stable grasp assistance.</p>
-                        <p class="result-statement">2. Our finger system demonstrates robustness across varying hand morphologies.</p>
-                    </div>
-                    <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_diff_hands.png" alt="TABLE I: Success Rates across Different Hands">
-                    <p class="pull-figure-caption"><strong>Success Rates across Different Hands.</strong> We report the performance when objects are placed within initial and target areas in the training data. EgoThumb achieves high performance across all four tasks when operated by the demonstrator, and it generalizes effectively to novel participants (User 1 and User 2).</p>
+                    <h3 class="subsection-title">1. EgoThumb achieves 90% average success across four tasks on the demonstrator’s hand.</h3>
+                    <figure class="demo-performance-figure">
+                        <img class="demo-performance-chart" src="assets/media/images/demo_performance.svg" alt="Demonstrator success rates: Pick Up Cube 100%, Unscrew Cap 70%, Stir Tea 90%, and Transfer Ball 100%. Average: 90%.">
+                        <figcaption class="pull-figure-caption"><strong>Demonstrator Performance.</strong> Success rates across four tasks with objects placed within the initial and target areas used during training (Table I, demonstrator row).</figcaption>
+                    </figure>
+                    <h4 class="subsection-title-secondary demo-video-title">Demonstrator Rollout</h4>
+                    <video class="task-video" controls autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-label="Demonstrator performing the four evaluation tasks with EgoThumb">
+                        <source src="assets/media/videos/regular_demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="result-subsection">
+                    <h3 class="subsection-title">2. Our finger system demonstrates robustness across varying hand morphologies.</h3>
+                    <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_diff_hands.png" alt="Success rates across different hands: demonstrator average 90%, User 1 average 92.5%, and User 2 average 87.5%.">
+                    <p class="pull-figure-caption"><strong>Generalization across Different Hands.</strong> EgoThumb achieves average success rates of 92.5% for User 1 and 87.5% for User 2, compared with 90% for the demonstrator. Objects are placed within the initial and target areas used during training.</p>
                     <h3 class="subsection-title-secondary" style="margin-top: 32px;">Rollout Videos</h3>
                     <div class="slideshow-container">
                         <div class="mySlides fade" data-slide="0">

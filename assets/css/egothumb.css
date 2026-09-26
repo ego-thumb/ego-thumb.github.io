@@ -239,6 +239,23 @@ body {
     margin-top: 8px;
 }
 
+.demo-performance-figure {
+    margin: 24px 0 0;
+}
+
+.demo-performance-chart {
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.result-subsection .demo-video-title {
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
 .subsection-title {
     font-size: 1.6rem;
     margin-bottom: 16px;
