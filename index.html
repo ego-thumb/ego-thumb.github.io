@@ -137,6 +137,13 @@
                     <h3 class="subsection-title">3. EgoThumb handles expanded task areas, but success drops on stirring and ball transfer.</h3>
                     <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_enlarge.png" alt="TABLE II: Success Rates with Expanded Task Areas">
                     <p class="pull-figure-caption"><strong>Success Rates in Expanded Initial and Target Areas.</strong> We evaluate our system on an expanded initial and target areas compared to the training data. Results show strong robustness on <strong>Pick Up Cube</strong> and <strong>Unscrew Cap</strong>, moderate robustness on <strong>Stir Tea</strong>, and a clear drop on <strong>Transfer Ball</strong>, likely due to increased foreground visual variation and its longer-horizon manipulation requirements.</p>
+                    <details class="finding-details">
+                        <summary>View task area</summary>
+                        <div class="finding-details-content">
+                            <img class="pull-figure-image" src="assets/media/images/init.png" alt="Task Area">
+                            <p class="pull-figure-caption"><strong>Task Area.</strong> Darker areas represent the initial and target areas for training data, while the larger, lighter areas (including the original darker areas) represent the expanded areas used for the robustness test of object distributions. <strong>Pick Up Cube</strong> and <strong>Unscrew Cap</strong> utilize the green areas, expanded from 10 cm × 10 cm to 50 cm × 10 cm. <strong>Transfer Ball</strong> and <strong>Stir Tea</strong> use red for pick-up and blue for drop-off, expanded from 10 cm × 10 cm to 30 cm × 25 cm. For the Transfer Ball task, expanding the evaluation area shifts the target receptacle’s position (“Target Change”).</p>
+                        </div>
+                    </details>
                     <h3 class="subsection-title-secondary" style="margin-top: 32px;">Rollout Videos</h3>
                     <div class="slideshow-container">
                         <div class="mySlides fade" data-slide="0">
@@ -173,6 +180,19 @@
                     <h3 class="subsection-title">4. EgoThumb achieves 67–73% average success on tea stirring in unseen environments.</h3>
                     <img class="pull-figure-image results-table-img" src="assets/media/images/tbl_diff_envs.png" alt="TABLE III: Task Success Rates Across Different Backgrounds">
                     <p class="pull-figure-caption"><strong>Task Success Rates Across Different Backgrounds.</strong> We evaluate our policy on two seen and two unseen environments using the Stir Tea Task. The policy maintains robust performance across both seen and entirely novel (unseen) backgrounds for all users.</p>
+                    <details class="finding-details">
+                        <summary>“In-the-Wild” Environments</summary>
+                        <div class="finding-details-content env-layout">
+                            <div class="env-image-col">
+                                <img class="pull-figure-image" src="assets/media/images/env.png" alt="Seen and unseen environments used to evaluate EgoThumb">
+                            </div>
+                            <div class="env-text-col">
+                                <p class="pull-figure-caption"><strong>Seen environments.</strong> These environments are included in the broadened training dataset.</p>
+                                <p class="pull-figure-caption"><strong>Unseen environments.</strong> These completely novel backgrounds are used only to test generalization beyond the training environments.</p>
+                                <p class="pull-figure-caption">Labels <strong>#1</strong> and <strong>#2</strong> identify the specific seen and unseen test environments.</p>
+                            </div>
+                        </div>
+                    </details>
                     <h3 class="subsection-title-secondary" style="margin-top: 32px;">Rollout Videos</h3>
                     <div class="slideshow-container">
                         <div class="mySlides fade" data-slide="0">
@@ -213,18 +233,6 @@
     </div>
 </section>
 
-<section class="white-section">
-    <div class="content-section">
-        <h2 class="section-title centered-title">Video</h2>
-        <div class="abstract-video-container">
-            <video class="abstract-video" controls playsinline webkit-playsinline preload="auto">
-                <source src="assets/media/videos/video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-</section>
-
 <section class="gray-section method-section">
     <div class="container">
         <h2 class="section-title centered-title">Overview of the EgoThumb System Design</h2>
@@ -232,48 +240,6 @@
             <div class="pull-figure-container">
                 <img class="pull-figure-image" src="assets/media/images/method.png" alt="EgoThumb System Design">
                 <p class="pull-figure-caption"><strong>Overview of the EgoThumb System Design.</strong> <strong>1) On-body View:</strong> The system comprises a wearable thumb and a forearm-mounted actuation module. <strong>2) Wearable Thumb:</strong> The thumb features dual tendon-driven joints for precise control and silicone-coated PLA phalanges for stable grasping. A palm-mounted fisheye camera provides egocentric visual feedback. <strong>3) Actuation Module:</strong> The actuation module houses three Dynamixel XL430-driven ratchet spools. This forearm-mounted configuration significantly reduces distal weight. <strong>4) Control System:</strong> Our EgoThumb interfaces with teleoperation and deployment systems via custom communication middleware.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="gray-section">
-    <div class="container">
-        <h2 class="section-title centered-title">Task Area</h2>
-        <div class="pull-figure-section">
-            <div class="pull-figure-container">
-                <img class="pull-figure-image" src="assets/media/images/init.png" alt="Task Area">
-                <p class="pull-figure-caption"><strong>Task Area.</strong> Darker areas represent the initial and target areas for training data, while the larger, lighter areas (including the original darker areas) represent the expanded areas used for the robustness test of object distributions. <strong>Pick Up Cube</strong> and <strong>Unscrew Cap</strong> utilize the green areas, expanded from 10 cm × 10 cm to 50 cm × 10 cm. <strong>Transfer Ball</strong> and <strong>Stir Tea</strong> use red for pick-up and blue for drop-off, expanded from 10 cm × 10 cm to 30 cm × 25 cm. For the Transfer Ball task, expanding the evaluation area shifts the target receptacle’s position (“Target Change”).</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="white-section">
-    <div class="container">
-        <h2 class="section-title centered-title">Task Area and “In-the-Wild” Environments</h2>
-        <div class="pull-figure-section">
-            <div class="pull-figure-container">
-                <div class="env-layout">
-                    <div class="env-image-col">
-                        <img class="pull-figure-image" src="assets/media/images/env.png" alt="Task Area and In-the-Wild Environments">
-                    </div>
-                    <div class="env-text-col">
-                        <p class="pull-figure-caption"><strong>“In-the-wild” Environments.</strong> The “Seen Environments” panel displays the diverse environments included in the broadened training dataset. The “Unseen Environments” panel displays completely novel backgrounds used strictly to test out-of-distribution generalization. Labels #1 and #2 denote the specific seen and unseen test environments.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="gray-section">
-    <div class="container">
-        <h2 class="section-title centered-title">Ablation Study</h2>
-        <div class="pull-figure-section">
-            <div class="pull-figure-container">
-                <img class="pull-figure-image" src="assets/media/images/tbl_abl.png" alt="TABLE IV: Ablation Study Results">
-                <p class="pull-figure-caption"><strong>Ablation Study Results.</strong> Disabling either latency matching or image cropping results in catastrophic policy failure, confirming their necessity for robust visuo-motor control.</p>
             </div>
         </div>
     </div>

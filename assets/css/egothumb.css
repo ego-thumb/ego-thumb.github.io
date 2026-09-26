@@ -239,6 +239,33 @@ body {
     margin-top: 8px;
 }
 
+.finding-details {
+    margin-top: 24px;
+    border-top: 1px solid #e5e9ed;
+    border-bottom: 1px solid #e5e9ed;
+}
+
+.finding-details summary {
+    padding: 16px 0;
+    color: #293b4d;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.finding-details summary:hover {
+    color: #1d2b38;
+}
+
+.finding-details summary:focus-visible {
+    outline: 3px solid #3273dc;
+    outline-offset: 4px;
+}
+
+.finding-details-content {
+    padding-top: 8px;
+}
+
 .demo-performance-figure {
     margin: 24px 0 0;
 }
