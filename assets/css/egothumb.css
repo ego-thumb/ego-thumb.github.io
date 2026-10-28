@@ -89,6 +89,14 @@ body {
     color: #666;
 }
 
+.publication-venue {
+    margin-top: 18px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #293b4d;
+}
+
 .publication-links {
     display: flex;
     flex-wrap: wrap;
